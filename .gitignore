@@ -1,0 +1,8 @@
+*~
+log/
+pkgs/apps/*/inst/
+pkgs/apps/*/obj/
+pkgs/libs/*/inst/
+pkgs/libs/*/obj/
+pkgs/tools/*/inst/
+pkgs/tools/*/obj/
