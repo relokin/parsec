@@ -180,7 +180,7 @@ sub BODY_40_59 {
 my ($i,$a,$b,$c,$d,$e,$f)=@_;
 my $j=$i+1;
 $code.=<<___;
-        lea     -0x70e44324($xi,$e),$f
+	lea     -0x70e44324($xi,$e),$f
 	mov	`4*($j%16)`(%rsp),$xi
 	mov	$b,$t0
 	mov	$b,$t1

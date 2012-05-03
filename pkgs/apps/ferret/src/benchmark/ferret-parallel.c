@@ -1,6 +1,6 @@
 /* AUTORIGHTS
 Copyright (C) 2007 Princeton University
-      
+
 This file is part of Ferret Toolkit.
 
 Ferret Toolkit is free software; you can redistribute it and/or modify
@@ -233,7 +233,7 @@ void *t_seg (void *dummy)
 	{
 		if(dequeue(&q_load_seg, &load) < 0)
 		    break;
-		
+
 		assert(load != NULL);
 		seg = (struct seg_data *)calloc(1, sizeof(struct seg_data));
 
@@ -264,7 +264,7 @@ void *t_extract (void *dummy)
 	{
 		if(dequeue(&q_seg_extract, &seg) < 0)
 		    break;
-		
+
 		assert(seg != NULL);
 		extract = (struct extract_data *)calloc(1, sizeof(struct extract_data));
 
@@ -292,7 +292,7 @@ void *t_vec (void *dummy)
 	{
 		if(dequeue(&q_extract_vec, &extract) < 0)
 		    break;
-		
+
 		assert(extract != NULL);
 		vec = (struct vec_query_data *)calloc(1, sizeof(struct vec_query_data));
 		vec->name = extract->name;
@@ -334,7 +334,7 @@ void *t_rank (void *dummy)
 	{
 		if(dequeue(&q_vec_rank, &vec) < 0)
 		    break;
-		
+
 		assert(vec != NULL);
 
 		rank = (struct rank_data *)calloc(1, sizeof(struct rank_data));
@@ -379,7 +379,7 @@ void *t_out (void *dummy)
 	{
 		if(dequeue(&q_rank_out, &rank) < 0)
 		    break;
-		
+
 		assert(rank != NULL);
 
 		fprintf(fout, "%s", rank->name);
@@ -400,7 +400,7 @@ void *t_out (void *dummy)
 		free(rank);
 
 		cnt_dequeue++;
-		
+
 		fprintf(stderr, "(%d,%d)\n", cnt_enqueue, cnt_dequeue);
 	}
 
@@ -443,7 +443,7 @@ int main (int argc, char *argv[])
 
 	if (argc < 8)
 	{
-		printf("%s <database> <table> <query dir> <top K> <depth> <n> <out>\n", argv[0]); 
+		printf("%s <database> <table> <query dir> <top K> <depth> <n> <out>\n", argv[0]);
 		return 0;
 	}
 
@@ -487,7 +487,7 @@ int main (int argc, char *argv[])
 	}
 
 	if (query_table != table) cass_table_load(query_table);
-	
+
 	cass_map_load(query_table->map);
 
 	cass_table_load(table);
