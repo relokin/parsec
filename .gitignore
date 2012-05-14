@@ -2,7 +2,17 @@
 log/
 pkgs/apps/*/inst/
 pkgs/apps/*/obj/
+pkgs/apps/*/inputs/
+pkgs/apps/*/parsec/
+pkgs/apps/*/run/
 pkgs/libs/*/inst/
 pkgs/libs/*/obj/
+pkgs/kernels/*/inst/
+pkgs/kernels/*/obj/
+pkgs/kernels/*/inputs/
+pkgs/kernels/*/run/
+pkgs/kernels/*/parsec/
 pkgs/tools/*/inst/
 pkgs/tools/*/obj/
+pkgs/tools/*/parsec/
+config/native.runconf
